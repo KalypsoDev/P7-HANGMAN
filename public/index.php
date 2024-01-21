@@ -1,4 +1,5 @@
 <?php
+    require "../src/php/init.php";
     require "../src/php/functions.php";
     require "../src/php/words.php";
     $word = randomWord($wordsList);
@@ -49,8 +50,7 @@
                             <span>_</span>
                         <?php
                     }
-                ?>
-                <?php
+
                     echo $word;
                 ?>
             </div>
