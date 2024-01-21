@@ -1,3 +1,8 @@
+<?php
+    require "../src/php/functions.php";
+    require "../src/php/words.php";
+    $word = randomWord($wordsList);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +50,9 @@
                 <span>t</span>
                 <span>e</span>
                 <span>_</span>
+                <?php
+                    echo $word;
+                ?>
             </div>
         </section>
         <section id="usedLetters">
