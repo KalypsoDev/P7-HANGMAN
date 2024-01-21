@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(#f69d3c, #3f87a6);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body, main, section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    display: block;
+}
