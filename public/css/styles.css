@@ -5,8 +5,8 @@
 
 body {
     min-height: 100vh;
-    background-image: url(../assets/img/pizarra-colegio\ 1.png);
-    background-size: 80%;
+    background-image: url(../assets/img/pizarra-colegio-marco.jpg);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     color: aliceblue;
