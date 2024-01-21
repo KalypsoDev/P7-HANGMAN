@@ -2,6 +2,7 @@
     require "../src/php/functions.php";
     require "../src/php/words.php";
     $word = randomWord($wordsList);
+    $wordLetters = str_split($word);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,14 +43,13 @@
         </section>
         <section id="word">
             <div>
-                <span>c</span>
-                <span>_</span>
-                <span>m</span>
-                <span>p</span>
-                <span>u</span>
-                <span>t</span>
-                <span>e</span>
-                <span>_</span>
+                <?php
+                    foreach($wordLetters as $letter) {
+                        ?>
+                            <span>_</span>
+                        <?php
+                    }
+                ?>
                 <?php
                     echo $word;
                 ?>
