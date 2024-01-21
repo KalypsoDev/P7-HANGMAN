@@ -4,17 +4,26 @@
 }
 
 body {
-    background: radial-gradient(#f69d3c, #3f87a6);
-    background-repeat: no-repeat;
     min-height: 100vh;
+    background-image: url(../assets/img/pizarra-colegio\ 1.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: aliceblue;
 }
 
-body, main, section {
+body, main, section, form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 svg {
