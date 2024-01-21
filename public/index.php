@@ -36,10 +36,28 @@
             </svg>
         </section>
         <section id="word">
+            <span>c</span>
+            <span>_</span>
+            <span>m</span>
+            <span>p</span>
+            <span>u</span>
+            <span>t</span>
+            <span>e</span>
+            <span>_</span>
         </section>
         <section id="usedLetters">
+            <span>a</span>
+            <span>c</span>
+            <span>m</span>
+            <span>p</span>
+            <span>i</span>
+            <span>u</span>
+            <span>t</span>
+            <span>e</span>
         </section>
         <section class="result">
+            <p id="win">You've won!</p>
+            <p id="lost">You've lost!</p>
         </section>
     </main>
     <footer>
