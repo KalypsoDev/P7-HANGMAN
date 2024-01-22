@@ -1,4 +1,10 @@
 <?php
     function randomWord($array){
-        return $array[array_rand($array)];
+        $currentWord = $_SESSION["currentWord"];
+        if ($currentWord) {
+            return $currentWord;
+        } 
+        $currentWord = $array[array_rand($array)];
+        $_SESSION["currentWord"] = $currentWord;
+        return $currentWord;
     }
