@@ -36,16 +36,37 @@ $wordLetters = str_split($word);
         <section id="image">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 399 427">
                 <g fill="none" stroke="#000" stroke-width="5.3">
-                    <path stroke-linecap="round" d="M104 425h-101" />
-                    <path stroke-linecap="round" d="M56 3v416" />
-                    <path stroke-linecap="round" d="M305 3h-249" />
-                    <path stroke-linecap="round" d="M305 5v29" />
-                    <circle cx="305" cy="66" r="30" />
-                    <path stroke-linecap="round" d="M305 98v142" />
-                    <path stroke-linecap="round" d="m305 155-89-31" />
-                    <path stroke-linecap="round" d="m307 155 89-31" />
-                    <path stroke-linecap="round" d="M305 241 239 369" />
-                    <path stroke-linecap="round" d="m305 240 65 127" />
+                    <?php if ($_SESSION["failedAttempts"] > 0) { ?>
+                        <path stroke-linecap="round" d="M104 425h-101" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 1) { ?>
+                        <path stroke-linecap="round" d="M56 3v416" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 2) { ?>
+                        <path stroke-linecap="round" d="M305 3h-249" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 3) { ?>
+                        <path stroke-linecap="round" d="M305 5v29" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 4) { ?>
+                        <circle cx="305" cy="66" r="30" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 5) { ?>
+                        <path stroke-linecap="round" d="M305 98v142" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 6) { ?>
+                        <path stroke-linecap="round" d="m305 155-89-31" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 7) { ?>
+                        <path stroke-linecap="round" d="m307 155 89-31" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 8) { ?>
+                        <path stroke-linecap="round" d="M305 241 239 369" />
+                    <?php }
+                    if ($_SESSION["failedAttempts"] > 9) { ?>
+
+                        <path stroke-linecap="round" d="m305 240 65 127" />
+                    <?php }  ?>
                 </g>
             </svg>
         </section>

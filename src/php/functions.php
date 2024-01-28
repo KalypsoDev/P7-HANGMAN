@@ -24,7 +24,7 @@ function checkLetter()
     */
 
     if (stripos($currentWord, $currentLetter) === false) {
-        echo "La letra se pondrá en la sección letras usadas";
+        $_SESSION["failedAttempts"]++;
     } else {
         echo "La letra se pondrá en la palabra";
     }
