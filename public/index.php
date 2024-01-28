@@ -83,18 +83,6 @@ $wordLetters = str_split($word);
                 ?>
             </div>
         </section>
-        <section id="usedLetters">
-            <div>
-                <span>a</span>
-                <span>c</span>
-                <span>m</span>
-                <span>p</span>
-                <span>i</span>
-                <span>u</span>
-                <span>t</span>
-                <span>e</span>
-            </div>
-        </section>
         <section class="result">
             <p id="win">You've won!</p>
             <p id="lost">You've lost!</p>
