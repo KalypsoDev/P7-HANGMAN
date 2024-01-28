@@ -16,7 +16,12 @@ $wordLetters = str_split($word);
 </head>
 
 <body>
-    <!--<?= $_POST["letter"] ?> - Lo ignora el navegador, pero en el inspector se puede ver en el html-->
+    <!--<?php
+        if (isset($_POST['letter'])) {
+            checkLetter();
+        }
+        ?>
+        -->
     <header>
         <h1>Kalypso's Hangman</h1>
     </header>
