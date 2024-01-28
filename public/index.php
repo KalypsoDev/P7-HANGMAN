@@ -74,12 +74,12 @@ $wordLetters = str_split($word);
             <div>
                 <?php
                 foreach ($wordLetters as $letter) {
-                ?>
-                    <span>_</span>
-                <?php
+                    if (isset($_SESSION["usedLetters"][strtoupper($letter)])) {
+                        echo "<span>$letter</span>";
+                    } else {
+                        echo "<span>_</span>";
+                    }
                 }
-
-                echo $word;
                 ?>
             </div>
         </section>
