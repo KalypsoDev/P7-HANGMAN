@@ -26,6 +26,21 @@ form {
     border-radius: 10px;
 }
 
+#keyboard{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+#keyboard > button {
+    width: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 svg {
     width: 300px;
     padding: 20px;
