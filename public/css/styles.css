@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../assets/img/pizarra-colegio-sin-marco.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: aliceblue;
+}
+
+body, main, section, form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#keyboard{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+#keyboard > button {
+    width: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+svg {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    display: block;
+}
