@@ -13,9 +13,17 @@ function randomWord($array)
 
 function checkLetter()
 {
-    $userLetter = $_POST["letter"];
+    $currentLetter = $_POST["letter"];
     $currentWord = $_SESSION["currentWord"];
-    if (stripos($currentWord, $userLetter) === false) {
+
+    $_SESSION["usedLetters"][$currentLetter] = true;
+    // Así se añade cada letra  como clave a un diccionario y le asignamos el valor true.
+    /*
+    $usedLetters[] = $currentLetter;
+    // Así se añadiría cada letra a un array, ['A', 'Z', ..]
+    */
+
+    if (stripos($currentWord, $currentLetter) === false) {
         echo "La letra se pondrá en la sección letras usadas";
     } else {
         echo "La letra se pondrá en la palabra";

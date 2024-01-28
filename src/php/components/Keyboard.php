@@ -16,7 +16,7 @@ function getAlphabet()
     <?php
     foreach (getAlphabet() as $letter) {
     ?>
-        <button name="letter" value="<?= $letter ?>"><?= $letter ?></button>
+        <button name="letter" value="<?= $letter ?>" <?= isset($_SESSION["usedLetters"][$letter]) ? "disabled" : "" ?>><?= $letter ?></button>
     <?php
     };
     ?>
