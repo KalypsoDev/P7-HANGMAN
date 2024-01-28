@@ -3,8 +3,8 @@ require "../src/php/init.php";
 require "../src/php/functions.php";
 require "../src/php/words.php";
 
-$word = randomWord($wordsList);
-$wordLetters = str_split($word);
+$currentWord = randomWord($wordsList);
+$wordLetters = str_split($currentWord);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,6 +93,7 @@ $wordLetters = str_split($word);
                 <p id="win">You've won!</p>
             <?php elseif ($lostGame) : ?>
                 <p id="lost">You've lost!</p>
+                <p>The word was "<?= $currentWord ?>"</p>
             <?php endif ?>
         </section>
     </main>
