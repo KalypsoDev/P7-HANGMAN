@@ -63,29 +63,37 @@ $wordLetters = str_split($word);
                     if ($_SESSION["failedAttempts"] > 8) { ?>
                         <path stroke-linecap="round" d="M305 241 239 369" />
                     <?php }
+                    $lostGame = false;
                     if ($_SESSION["failedAttempts"] > 9) { ?>
 
                         <path stroke-linecap="round" d="m305 240 65 127" />
-                    <?php }  ?>
+                    <?php
+                        $lostGame = true;
+                    }  ?>
                 </g>
             </svg>
         </section>
         <section id="word">
             <div>
                 <?php
+                $wonGame = true;
                 foreach ($wordLetters as $letter) {
                     if (isset($_SESSION["usedLetters"][strtoupper($letter)])) {
-                        echo "<span>$letter</span>";
+                        echo "<span>$letter </span>";
                     } else {
-                        echo "<span>_</span>";
+                        $wonGame = false;
+                        echo "<span>_ </span>";
                     }
                 }
                 ?>
             </div>
         </section>
         <section class="result">
-            <p id="win">You've won!</p>
-            <p id="lost">You've lost!</p>
+            <?php if ($wonGame) : ?>
+                <p id="win">You've won!</p>
+            <?php elseif ($lostGame) : ?>
+                <p id="lost">You've lost!</p>
+            <?php endif ?>
         </section>
     </main>
     <footer>
