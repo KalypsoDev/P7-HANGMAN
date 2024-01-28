@@ -91,9 +91,11 @@ $wordLetters = str_split($currentWord);
         <section class="result">
             <?php if ($wonGame) : ?>
                 <p id="win">You've won!</p>
+                <a href="./"><button>Reset game</button></a>
             <?php elseif ($lostGame) : ?>
                 <p id="lost">You've lost!</p>
                 <p>The word was "<?= $currentWord ?>"</p>
+                <a href="./"><button>Reset game</button></a>
             <?php endif ?>
         </section>
     </main>
@@ -103,3 +105,10 @@ $wordLetters = str_split($currentWord);
 </body>
 
 </html>
+<?php
+if ($wonGame || $lostGame) {
+    $_SESSION["currentWord"] = null;
+    $_SESSION["usedLetters"] = [];
+    $_SESSION["failedAttempts"] = 0;
+}
+?>
