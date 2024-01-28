@@ -2,6 +2,7 @@
 require "../src/php/init.php";
 require "../src/php/functions.php";
 require "../src/php/words.php";
+
 $word = randomWord($wordsList);
 $wordLetters = str_split($word);
 ?>
