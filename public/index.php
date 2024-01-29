@@ -63,13 +63,10 @@ $wordLetters = str_split($currentWord);
                     if ($_SESSION["failedAttempts"] > 8) { ?>
                         <path stroke-linecap="round" d="M305 241 239 369" />
                     <?php }
-                    $lostGame = false;
                     if ($_SESSION["failedAttempts"] > 9) { ?>
 
                         <path stroke-linecap="round" d="m305 240 65 127" />
-                    <?php
-                        $lostGame = true;
-                    }  ?>
+                    <?php }  ?>
                 </g>
             </svg>
         </section>
@@ -92,7 +89,7 @@ $wordLetters = str_split($currentWord);
             <?php if ($wonGame) : ?>
                 <p id="win">You've won!</p>
                 <a href="./"><button>Reset game</button></a>
-            <?php elseif ($lostGame) : ?>
+            <?php elseif ($_SESSION["failedAttempts"] > 9) : ?>
                 <p id="lost">You've lost!</p>
                 <p>The word was "<?= $currentWord ?>"</p>
                 <a href="./"><button>Reset game</button></a>
@@ -106,7 +103,7 @@ $wordLetters = str_split($currentWord);
 
 </html>
 <?php
-if ($wonGame || $lostGame) {
+if ($wonGame || $_SESSION["failedAttempts"] > 9) {
     $_SESSION["currentWord"] = null;
     $_SESSION["usedLetters"] = [];
     $_SESSION["failedAttempts"] = 0;
